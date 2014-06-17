@@ -1,0 +1,12 @@
+---
+- name: Get pyethereum
+  git: dest=/usr/local/src/pyethereum repo=git://github.com/ethereum/pyethereum
+
+- name: Install pyethereum
+  shell: chdir=/usr/local/src/pyethereum python setup.py install
+
+- name: Get serpent
+  git: dest=/usr/local/src/serpent repo=git://github.com/ethereum/serpent
+
+- name: Install serpent
+  shell: chdir=/usr/local/src/serpent python setup.py install
